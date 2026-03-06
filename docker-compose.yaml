@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: always
+    image: jwt_generator_fastapi
+    container_name: jwt_generator
+    network_mode: bridge
+    ports:
+      - "8000:8000"
