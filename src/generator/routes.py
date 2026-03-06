@@ -11,11 +11,11 @@ router = APIRouter()
 
 @router.post(
     "/jwt",
-    response_description="Create a new subscription",
+    response_description="Generate a JWT",
     status_code=status.HTTP_201_CREATED,
     response_model=DataOut,
 )
-async def create_subscription(
+async def generate_jwt(
     request: Request,
     data: DataIn = Body(...),
 ):

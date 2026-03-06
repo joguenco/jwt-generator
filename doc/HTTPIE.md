@@ -7,5 +7,5 @@ http localhost:8000/ping
 
 ## Version
 ```
-http localhost:8000/version'
+http localhost:8000/version
 ```

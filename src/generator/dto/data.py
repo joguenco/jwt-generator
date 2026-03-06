@@ -20,5 +20,6 @@ class DataIn(BaseModel):
     expiration_date: date
     role: list[str] = ["demo"]
     private_key: Optional[str] = None
+    audience: str
     issuer: str
     service: str
