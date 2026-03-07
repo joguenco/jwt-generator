@@ -1,0 +1,12 @@
+.modal-body {
+    color: #2d2d2d;
+    font-size: 1.2rem;
+    padding: 20px;
+    border: 2px solid #788ed0;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 18px;
+    margin-left: 18px;
+    margin-right: 18px;
+}

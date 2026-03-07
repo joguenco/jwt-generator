@@ -12,7 +12,7 @@ router = APIRouter()
 @router.post(
     "/jwt",
     response_description="Generate a JWT",
-    status_code=status.HTTP_201_CREATED,
+    status_code=status.HTTP_200_OK,
     response_model=DataOut,
 )
 async def generate_jwt(
@@ -33,9 +33,6 @@ async def generate_jwt(
     )
 
     return DataOut(
-        identifier=data["identifier"],
-        name=data["name"],
-        email=data["email"],
+        audience=data["audience"],
         token=client_token,
-        role=data["role"],
     )

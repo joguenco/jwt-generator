@@ -5,12 +5,8 @@ from pydantic import BaseModel
 
 
 class DataOut(BaseModel):
-    identifier: str
-    name: str
-    email: str
+    audience: str
     token: Optional[str] = None
-    status: Optional[bool] = True
-    role: list[str]
 
 
 class DataIn(BaseModel):
