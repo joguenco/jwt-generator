@@ -27,9 +27,9 @@ async def generate_jwt(
         data["email"],
         data["role"],
         data["private_key"],
-        data["expiration_date"],
+        data["audience"],
         data["issuer"],
-        data["service"],
+        data["expiration_date"],
     )
 
     return DataOut(

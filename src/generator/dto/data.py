@@ -17,9 +17,8 @@ class DataIn(BaseModel):
     identifier: str
     name: str
     email: str
-    expiration_date: date
     role: list[str] = ["demo"]
     private_key: Optional[str] = None
     audience: str
     issuer: str
-    service: str
+    expiration_date: date

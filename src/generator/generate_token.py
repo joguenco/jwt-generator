@@ -6,12 +6,12 @@ from datetime import datetime, timezone
 def generate_token(
     identifier: str,
     name: str,
-    email,
+    email: str,
     role: list[str],
     private_key: str,
-    expiration_date: str,
-    issuer: str = "jwt.resolvedor.dev",
-    service: str = "JwtGenerator",
+    audience: str,
+    issuer: str = "Resolvedor Service",
+    expiration_date: str = "",
 ) -> str:
     current_time = datetime.now(timezone.utc)
     date_object = datetime.strptime(expiration_date, "%Y-%m-%d")
@@ -21,7 +21,7 @@ def generate_token(
         "iss": issuer,
         "iat": current_time,
         "exp": integer_date,
-        "aud": "resolvedor.dev",
+        "aud": audience,
         "sub": "bussines@resolvedor.dev",
         "client": identifier,
         "name": name,
