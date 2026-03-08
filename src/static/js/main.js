@@ -17,6 +17,8 @@ function generate() {
     const data = validateData()
     if (!data) return
 
+    modalTitle.textContent = 'Generate Token'
+
     fetch(url, {
         method: 'POST',
         headers: {
@@ -32,7 +34,9 @@ function generate() {
         })
         .then(data => {
             console.log('Success:', data)
-            modalMessage.textContent = `audience: ${data.audience}\ntoken: ${data.token}`
+            // modalMessage.textContent = `audience: ${data.audience}\ntoken: ${data.token}`
+            modalMessage.textContent = `URL_BACKUP_SERVER=https://bakuryu.resolvedor.dev/
+                                        TOKEN_SECRET=${data.token}`
             modalDialog.show()
         })
         .catch(error => {

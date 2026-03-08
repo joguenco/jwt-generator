@@ -1,0 +1,16 @@
+.modal-body {
+    color: #8c0487;
+    font-size: 1.5rem;
+    padding: 20px;
+    border: 2px solid #0c613b;
+    height: auto;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    text-align: left;
+}
