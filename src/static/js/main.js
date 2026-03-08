@@ -43,7 +43,7 @@ function generate() {
         })
         .then(data => {
             console.log('Success:', data)
-            modalMessage.textContent = `URL_SERVER=https://bakuryu.resolvedor.dev/
+            modalMessage.textContent = `URL_SERVER=${data.audience}
                                         TOKEN_SECRET=${data.token}`
             modalDialog.show()
         })
