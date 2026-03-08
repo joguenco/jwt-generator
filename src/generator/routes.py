@@ -10,8 +10,8 @@ router = APIRouter()
 
 
 @router.post(
-    "/jwt",
-    response_description="Generate a JWT",
+    '/jwt',
+    response_description='Generate a JWT',
     status_code=status.HTTP_200_OK,
     response_model=DataOut,
 )
@@ -19,20 +19,42 @@ async def generate_jwt(
     request: Request,
     data: DataIn = Body(...),
 ):
-    data = jsonable_encoder(data)
+    if not validate_data(data):
+        return {'error': 'Invalid data'}
+
+    print('Data', data)
 
     client_token = generate_token(
-        data["identifier"],
-        data["name"],
-        data["email"],
-        data["role"],
-        data["private_key"],
-        data["audience"],
-        data["issuer"],
-        data["expiration_date"],
+        data.identifier,
+        data.name,
+        data.email,
+        data.role,
+        data.private_key,
+        data.audience,
+        data.issuer,
+        data.expiration_date,
     )
 
     return DataOut(
-        audience=data["audience"],
+        audience=data.audience,
         token=client_token,
     )
+
+
+def validate_data(data: DataIn) -> bool:
+    if not data.identifier:
+        return False
+    if not data.name:
+        return False
+    if not data.email:
+        return False
+    if not data.role:
+        return False
+    if not data.private_key:
+        return False
+    if not data.audience:
+        return False
+    if not data.expiration_date:
+        return False
+
+    return True

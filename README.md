@@ -39,7 +39,7 @@ ruff format .
 ```
 ## Run app
 ```
-uvicorn src.main:app --reload --log-config=log_conf.yaml
+uvicorn src.main:app --port=9009 --reload --log-config=log_conf.yaml
 ```
 ## Access
 ```

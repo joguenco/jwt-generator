@@ -13,15 +13,15 @@ logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("Application initialized successfully.")
+    logger.info('Application initialized successfully.')
     yield
     # Place for shutdown code if needed in the future
-    logger.info("Application shutdown complete.")
+    logger.info('Application shutdown complete.')
 
 
 app = FastAPI(lifespan=lifespan)
 
-app.mount("/static", StaticFiles(directory="src/static"), name="static")
+app.mount('/static', StaticFiles(directory='src/static'), name='static')
 
 app.include_router(index_router)
 app.include_router(ping_router)

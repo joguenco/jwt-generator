@@ -1,5 +1,6 @@
+from datetime import datetime, timezone
 from typing import Optional
-from datetime import date
+
 
 from pydantic import BaseModel
 
@@ -13,8 +14,8 @@ class DataIn(BaseModel):
     identifier: str
     name: str
     email: str
-    role: list[str] = ["demo"]
+    role: list[str] = ['demo']
     private_key: Optional[str] = None
     audience: str
     issuer: str
-    expiration_date: date
+    expiration_date: datetime = datetime.now(timezone.utc)

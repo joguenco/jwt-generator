@@ -15,6 +15,6 @@ RUN pip install --upgrade setuptools
 
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
-EXPOSE 8000
+EXPOSE 9009
 
-CMD ["uvicorn", "src.main:app", "--log-config=log_conf.yaml", "--host", "0.0.0.0"]
+CMD ["uvicorn", "src.main:app", "--port=9009", "--log-config=log_conf.yaml", "--host", "0.0.0.0"]
