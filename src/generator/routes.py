@@ -33,9 +33,6 @@ async def generate_jwt(
     )
 
     return DataOut(
-        identifier=data["identifier"],
-        name=data["name"],
-        email=data["email"],
+        audience=data["audience"],
         token=client_token,
-        role=data["role"],
     )

@@ -13,7 +13,7 @@ async def version():
         "author": "Jorge Luis",
         "website": "https://resolvedor.dev",
         "version": "1.0.0",
-        "versionOS": platform.platform(),
+        "versionOS": "Haiku Os",  # platform.platform(),
         "versionRuntime": f"Python {sys.version}",
         "versionDatabase": None,
     }

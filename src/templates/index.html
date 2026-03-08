@@ -36,47 +36,52 @@
         <h1>Data for your JSON Web Token</h1>
     </div>
     <div>
-        <!-- <form class="row">-->
+        <!-- <form class="row"> -->
             <div class="col-6">
                 <div class="mb-3">
                     <label for="identifier" class="form-label">Identifier</label>
-                    <input type="text" class="form-control" id="identifier" name="identifier"
+                    <input id="identifier" type="text" class="form-control" name="identifier"
                            placeholder="Unique Identifier or VAT" required>
                 </div>
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Friendly Name" required>
+                    <input id="name" type="text" class="form-control" name="name" placeholder="Friendly Name" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
+                    <input id="email" type="email" class="form-control" name="email" placeholder="name@example.com"
                            required>
                 </div>
                 <div class="mb-3">
                     <label for="role" class="form-label">Role</label>
-                    <input type="text" class="form-control" id="role" name="role" placeholder="Role Name (Super)"
+                    <input id="role" type="text" class="form-control" name="role" placeholder="Role Name (Super)"
                            required>
                 </div>
                 <div class="mb-3">
                     <label for="expiration_date" class="form-label">Expiration Date</label>
-                    <input type="text" class="form-control" id="expiration_date" name="expiration_date"
+                    <input id="expiration_date" type="text" class="form-control" name="expiration_date"
                            placeholder="YYYY-MM-DD" required>
                 </div>
                 <div class="mb-3">
+                    <label for="audience" class="form-label">Audience</label>
+                    <input id="audience" type="text" class="form-control" name="audience"
+                           placeholder="Service Name (My Own Service)" required>
+                </div>
+                <div class="mb-3">
                     <label for="issuer" class="form-label">Issuer</label>
-                    <input type="text" class="form-control" id="issuer" name="issuer"
+                    <input id="issuer" type="text" class="form-control" name="issuer"
                            placeholder="Service Name (My Own Service)" required>
                 </div>
                 <div class="mb-3">
                     <label for="private_key" class="form-label">Private Key</label>
-                    <input type="text" class="form-control" id="private_key" name="private_key"
+                    <input id="private_key" type="text" class="form-control" name="private_key"
                            placeholder="Private Key (123456789XXX)" required>
                 </div>
                 <button id="generate" type="submit" class="btn btn-primary">Generate</button>
                 <button id="ping" type="submit" class="btn btn-info">Ping</button>
             </div>
 
-<!--        </form>-->
+        <!-- </form> -->
     </div>
 </div>
 
@@ -85,7 +90,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalTitle">Message</h5>
+        <h5 class="modal-title" id="modalTitle">...</h5>
       </div>
       <div id="modalMessage" class="modal-body">
         ...

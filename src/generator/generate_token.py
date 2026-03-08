@@ -22,12 +22,11 @@ def generate_token(
         "iat": current_time,
         "exp": integer_date,
         "aud": audience,
-        "sub": "bussines@resolvedor.dev",
+        "sub": email,
         "client": identifier,
         "name": name,
         "email": email,
         "role": role,
-        "service": service,
     }
 
     jwt_token = jwt.encode(payload, private_key, algorithm="HS256")
